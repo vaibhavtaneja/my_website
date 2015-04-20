@@ -1,0 +1,375 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+ 
+@import "compass";
+
+div.layoutSidebar {
+  background: image-url('part_sidebar1.png') 0 0 scroll transparent repeat-y;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  
+  
+  .sidebar {
+    width: 308px;
+    background: image-url("bg_sidebar1.png") 0 0 transparent no-repeat;
+    overflow: hidden;
+    color: white;
+
+    vertical-align: top;
+
+    .content {
+      padding: 20px;
+      padding-left: 20px;
+      padding-right: 22px;
+
+      a {
+        color: white;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      h1 {
+        font-size: 30px;
+        font-weight: bold;
+        padding-bottom: 33px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: -1px;
+        padding-top: 10px;
+        color: black;
+      }
+
+      h2 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: black;
+      }
+
+      .about {
+        padding-bottom: 15px;
+        /*
+        border-bottom: 1px solid #F1A953;
+        */
+        padding-left: 15px;
+
+        h1 {
+          a {
+            text-decoration: none;
+            color: black;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        p {
+          line-height: 20px;
+          font-size : 14px;
+          color: black;
+        }
+      }
+
+      .follow {
+        padding-top: 20px;
+        padding-left: 15px;
+        a {
+          margin-right: 5px;
+          margin-top: 10px;
+          img {
+            opacity: 0.7;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+        h2 {
+          padding-bottom: 15px;
+        }
+      }
+
+      .projects {
+        h2 {
+          width: 100%;vertical-align: top;
+          margin-top: 25px;
+          padding-left: 15px;
+        }
+
+        .list {
+          background-color: rgba(0,0,0,0.15);
+          margin-top: 14px;
+          width: 251px;
+          border: 1px solid #F1A953;
+          @include border-radius(8px);
+          padding-bottom: 20px;
+          padding-right: 14px;
+
+          a {
+            font-weight: bold;
+            font-family: Arial, 'Sans-serif';
+            text-decoration: none;
+            border-bottom: 1px white solid;
+          }
+
+          p {
+            padding-top: 3px;
+            font-size: 13px;
+            line-height: 15px;
+          }
+
+          .project {
+            min-height: 40px;
+            padding-left: 14px;
+            padding-top: 15px;
+
+            a:hover {
+              border-bottom: 0px solid white;
+            }
+          }
+
+          .joosy {
+            padding-left: 80px;
+            background: image-url('joosy.png') no-repeat;
+            background-position: 16px 18px;
+          }
+
+          .roundbank {
+            padding-left: 80px;
+            background: image-url('roundbank.png') no-repeat;
+            background-position: 16px 13px;
+          }
+
+          .smartkiosk {
+            padding-left: 80px;
+            background: image-url('smartkiosk.png') no-repeat;
+            background-position: 16px 6px;
+          }
+
+          .rove {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #F1A953;
+            width: 100%;
+          }vertical-align: top;
+        }
+      }
+
+    }
+  }
+  .sign_in {
+        position: absolute;
+        /*
+        vertical-align: bottom;
+        right: 1em;
+        top: 90%;
+        */
+        bottom: -1em;
+        right: 0.6em;
+        font-size: 1.3em;
+        color: #9eafba;
+  }
+}
+
+.button {
+  outline: none;
+  background: transparent;
+  border: 1px solid #d6dce0;
+  padding: .5em 1.5em;
+  border-radius: 1.5em;
+  &:hover {
+    border: 1px solid #33acb7;
+    color: #33acb7;
+    a {
+      color: #33acb7 !important;
+    }
+  }
+}
+
+.clearfix:after {
+   content: ".";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+#main_content {
+  margin-left: 308px;
+  vertical-align: top;
+  #header {
+    padding: 1em 3em;
+    border-bottom: 1px solid #d6dce0;
+    background: #f5f7f9;
+    color: #9eafba;
+    p {
+      display: inline;
+    }
+    a {
+      color: #9eafba;
+      text-decoration: none;
+    }
+    .buttons {
+      float: right;
+      margin-top: -6px;
+      .button {
+        font-size: .8em;
+        margin-left: .5em;
+      }
+    }
+  }
+  .post_wrapper {
+    padding: 3em;
+    border-bottom: 1px solid #d6dce0;
+    .title {
+      margin: 0;
+      a {
+        font-weight: 500;
+        text-decoration: none;
+        color: #2a2f35;
+        font-size: 1.5em;
+        &:hover {
+          color: #33acb7;
+        }
+      }
+    }
+    .date_and_author {
+      color: #9eafba;
+      margin: .5em 0 0 0;
+    }
+  }
+  #post_content {
+    padding: 1em 3em;
+    .title {
+      font-weight: 500;
+      text-decoration: none;
+      color: #2a2f35;
+      font-size: 2.5em;
+      margin-bottom: 0;
+    }
+    .body {
+      font-size: 1.1em;
+      line-height: 1.75;
+    }
+    .date_and_author {
+      color: #9eafba;
+      margin: .5em 0 2em 0;
+    }
+    #comments {
+      h2 {
+        margin: 3em 0 1em 0;
+        border-bottom: 1px solid #d6dce0;
+        padding-bottom: 0.5em;
+      }
+      h3 {
+        margin-top: 2em;
+      }
+      .comment {
+        border-bottom: 1px solid #d6dce0;
+        padding: 1.5em 2em;
+        .clear_both {
+          clear: both;
+        }
+        &:after {
+          clear: both;
+        }
+        .comment_content {
+          float: left;
+          .comment_name {
+            margin: 1em 0 0 0;
+            font-size: 0.7em;
+            text-transform: uppercase;
+          }
+          .comment_body {
+            font-size: 1.2em;
+            margin: 0.2em 0 0 0;
+          }
+          .comment_time {
+            margin-top: 1.2em;
+            font-size: .8em;
+          }
+        }
+        .button {
+          float: right;
+        }
+      }
+      input[type="text"], textarea {
+        width: 50%;
+      }
+    }
+  }
+  #page_wrapper {
+    padding: 3em;
+    #profile_image {
+      width: 300px;
+      float: left;
+      margin-right: 2em;
+      img {
+        width: 100%;
+        border-radius: 0.35em;
+      }
+    }
+    #content {
+      h1 {
+        font-weight: 500;
+      }
+      p {
+        font-size: 1.1em;
+        line-height: 1.75;
+      }
+      a {
+        color: #33acb7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+    }
+  }
+  .links {
+    margin: 2em 0;
+  }
+  input[type="text"], input[type="email"], input[type="password"], textarea {
+    width: 90%;
+    border: 1px solid #d6dce0;
+    border-radius: .35em;
+    margin-top: 10px;
+    padding: .5em 1em;
+    line-height: 1.75;
+  }
+  input[type="text"] {
+    height: 35px;
+  }
+  textarea {
+    min-height: 180px;
+  }
+  input[type="submit"] {
+    outline: none;
+    background: transparent;
+    border: 1px solid #d6dce0;
+    padding: .5em 1.5em;
+    font-size: 1.1em;
+    border-radius: 1.5em;
+    margin-left: .5em;
+    &:hover {
+      border: 1px solid #33acb7;
+      color: #33acb7;
+    }
+  }
+}

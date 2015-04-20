@@ -1,14 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MyWebsite</title>
+  <title>RailsTest</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Slabo+27px' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div class="layoutSidebar" >
+	<div class="sidebar">
+	  <div class="content">
+	    <div class="about">
+	      <a href="/"><%= image_tag "image.png" %></a>
+	      <h1><a href="/">Vaibhav Taneja</a></h1>
+	      <h2>About me</h2>
+	      <p>
+	        Ruby On Rails developer, Engineer by choice ^_^.<br>
+	        Hadoop ,Big Data and R enthusiast,<br>
+	        I do full-stack and support FC Barcelona.
+	      </p>
+	    </div>
+	    <div class="follow">
+	      <a href="https://www.linkedin.com/in/vaibhavtaneja2"><%= image_tag "linkedin.png" %></a>
+	      <a href="https://twitter.com/vaibhavtaneja1"><%= image_tag "twitter.png" %></a>
+	      <a href="http://facebook.com/vaibhavtaneja1"><%= image_tag "facebook.png" %></a>
+	      <a href="http://github.com/vaibhavtaneja"><%= image_tag "github.png" %></a>
+	      <a href="mailto:vaibhavtaneja@live.com"><%= image_tag "mail.png" %></a>
+	    </div>
+	    <p class="sign_in">Admin Login</p>
+	    <div class="projects">
+	      
+	    </div>
+	  </div>
+	</div>
+
+</div>
+<div id="main_content">
+	<div id="header">
+		<p>All Posts</p>
+		
+		<div class="buttons">
+			<button class="button"><%= link_to "New Post", new_post_path %></button>
+			<button class="button">Log Out</button>
+		</div>
+	</div>
+
+	<% flash.each do |name, msg| %>
+	<%= content_tag(:div, msg, class: "alert") %>
+	<% end %>
+
+	<%= yield %>
+</div>
+	
+
 
 </body>
 </html>

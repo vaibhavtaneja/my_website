@@ -40,3 +40,5 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 #add devise
 gem 'devise', '~> 3.3.0'
+gem 'capistrano', '~> 3.3.5'
+gem 'capistrano-rails', '~> 1.1.2'
